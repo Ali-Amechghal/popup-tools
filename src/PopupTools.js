@@ -156,6 +156,7 @@ function popupExecute(execute, url, name, options, callback) {
                 setTimeout(function delayWindowClosing () {
                     clearInterval(interval);
                     if (!isMessageSent) {
+                        isMessageSent=true;
                         popupCallback(new Error('Popup closed'));
                     }
                 }, 500);
